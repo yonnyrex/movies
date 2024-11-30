@@ -1,0 +1,27 @@
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+xcuserdata/
+xcshareddata/
+*.xcuserstate
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.generated.swift
+
+## Obj-C/Swift specific
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+
+# OS X
+.DS_Store
