@@ -7,10 +7,12 @@
 
 import Foundation
 import Combine
+import Stinsen
 
 class LoginViewModel: ObservableObject {
         
     // MARK: - Propety Wrappers
+    @RouterObject var router: UnauthenticatedCoordinator.Router?
     @Published var user = ""
     @Published var password = ""
     @Published var error: LoginError?
@@ -20,6 +22,7 @@ class LoginViewModel: ObservableObject {
     // MARK: - Variables
     private var loginService: LoginServiceType
     private var cancellables: Set<AnyCancellable> = .init()
+    private var userDefaults: PersistenceServiceType
 
     var fieldsAreEmpty: Bool {
         user.isEmpty || password.isEmpty
@@ -27,9 +30,11 @@ class LoginViewModel: ObservableObject {
     
     // MARK: - Initializer
     init(
-        loginService: LoginServiceType = LoginService()
+        loginService: LoginServiceType = LoginService(),
+        userDefaults: PersistenceServiceType = UserDefaultsService()
     ) {
         self.loginService = loginService
+        self.userDefaults = userDefaults
         setupBindings()
     }
     
@@ -39,7 +44,6 @@ class LoginViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] error in
                 guard error != nil else { return }
-                
                 self?.displayError = true
             }
             .store(in: &cancellables)
@@ -60,7 +64,8 @@ class LoginViewModel: ObservableObject {
                     return
                 }
             } receiveValue: { result in
-                print(result.message)
+                self.userDefaults.save(key: .isLogin, value: result.success)
+                self.router?.root(\.authenticated)
             }
             .store(in: &cancellables)
     }

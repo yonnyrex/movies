@@ -19,6 +19,13 @@
 		EA2793AC2CFC13C50088733D /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793AB2CFC13C50088733D /* LoginResult.swift */; };
 		EA2793AF2CFC19340088733D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EA2793AE2CFC19340088733D /* Moya */; };
 		EA2793B22CFC2B6B0088733D /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793B12CFC2B6B0088733D /* MoviesView.swift */; };
+		EA2793B52CFC2E470088733D /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = EA2793B42CFC2E470088733D /* Stinsen */; };
+		EA2793B92CFC2FE60088733D /* UnauthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793B82CFC2FE60088733D /* UnauthenticatedCoordinator.swift */; };
+		EA2793BB2CFC30540088733D /* AuthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793BA2CFC30540088733D /* AuthenticatedCoordinator.swift */; };
+		EA2793BD2CFC315D0088733D /* Stinsen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793BC2CFC315D0088733D /* Stinsen+Extensions.swift */; };
+		EA2793C02CFC33FB0088733D /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793BF2CFC33FB0088733D /* PersistenceService.swift */; };
+		EA2793C22CFC34590088733D /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793C12CFC34590088733D /* UserDefaultsService.swift */; };
+		EA2793C52CFC35920088733D /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793C42CFC35920088733D /* Codable+Extensions.swift */; };
 		EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA666C32CFBC67D005DACE2 /* moviesApp.swift */; };
 		EAA666C82CFBC67F005DACE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666C72CFBC67F005DACE2 /* Assets.xcassets */; };
 		EAA666CB2CFBC67F005DACE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666CA2CFBC67F005DACE2 /* Preview Assets.xcassets */; };
@@ -36,6 +43,12 @@
 		EA2793A82CFC13850088733D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		EA2793AB2CFC13C50088733D /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		EA2793B12CFC2B6B0088733D /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		EA2793B82CFC2FE60088733D /* UnauthenticatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthenticatedCoordinator.swift; sourceTree = "<group>"; };
+		EA2793BA2CFC30540088733D /* AuthenticatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedCoordinator.swift; sourceTree = "<group>"; };
+		EA2793BC2CFC315D0088733D /* Stinsen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stinsen+Extensions.swift"; sourceTree = "<group>"; };
+		EA2793BF2CFC33FB0088733D /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		EA2793C12CFC34590088733D /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		EA2793C42CFC35920088733D /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
 		EAA666C02CFBC67D005DACE2 /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA666C32CFBC67D005DACE2 /* moviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesApp.swift; sourceTree = "<group>"; };
 		EAA666C72CFBC67F005DACE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2793AF2CFC19340088733D /* Moya in Frameworks */,
+				EA2793B52CFC2E470088733D /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +151,23 @@
 			path = Movies;
 			sourceTree = "<group>";
 		};
+		EA2793BE2CFC33F20088733D /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793C32CFC34820088733D /* UserDefaults */,
+				EA2793C12CFC34590088733D /* UserDefaultsService.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		EA2793C32CFC34820088733D /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793BF2CFC33FB0088733D /* PersistenceService.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		EAA666B72CFBC67D005DACE2 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +188,7 @@
 		EAA666C22CFBC67D005DACE2 /* movies */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793BE2CFC33F20088733D /* Persistence */,
 				EAA666D22CFBC828005DACE2 /* Modules */,
 				EAA666D82CFBCC6E005DACE2 /* Navigation */,
 				EAA666D12CFBC818005DACE2 /* Networking */,
@@ -224,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				EA2793902CFBD6A90088733D /* String+Extensions.swift */,
+				EA2793BC2CFC315D0088733D /* Stinsen+Extensions.swift */,
+				EA2793C42CFC35920088733D /* Codable+Extensions.swift */,
 			);
 			path = "Extensions ";
 			sourceTree = "<group>";
@@ -231,6 +265,8 @@
 		EAA666D82CFBCC6E005DACE2 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793B82CFC2FE60088733D /* UnauthenticatedCoordinator.swift */,
+				EA2793BA2CFC30540088733D /* AuthenticatedCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -253,6 +289,7 @@
 			name = movies;
 			packageProductDependencies = (
 				EA2793AE2CFC19340088733D /* Moya */,
+				EA2793B42CFC2E470088733D /* Stinsen */,
 			);
 			productName = movies;
 			productReference = EAA666C02CFBC67D005DACE2 /* movies.app */;
@@ -284,6 +321,7 @@
 			mainGroup = EAA666B72CFBC67D005DACE2;
 			packageReferences = (
 				EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */,
+				EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */,
 			);
 			productRefGroup = EAA666C12CFBC67D005DACE2 /* Products */;
 			projectDirPath = "";
@@ -313,11 +351,17 @@
 			files = (
 				EA2793AC2CFC13C50088733D /* LoginResult.swift in Sources */,
 				EA2793B22CFC2B6B0088733D /* MoviesView.swift in Sources */,
+				EA2793BD2CFC315D0088733D /* Stinsen+Extensions.swift in Sources */,
+				EA2793B92CFC2FE60088733D /* UnauthenticatedCoordinator.swift in Sources */,
 				EA2793A72CFBDA7B0088733D /* ServiceError.swift in Sources */,
+				EA2793BB2CFC30540088733D /* AuthenticatedCoordinator.swift in Sources */,
 				EA27939C2CFBD6E70088733D /* LoginView.swift in Sources */,
 				EA2793942CFBD6BF0088733D /* CustomTextField.swift in Sources */,
 				EA2793912CFBD6A90088733D /* String+Extensions.swift in Sources */,
+				EA2793C02CFC33FB0088733D /* PersistenceService.swift in Sources */,
+				EA2793C22CFC34590088733D /* UserDefaultsService.swift in Sources */,
 				EA2793A52CFBDA280088733D /* NetworkService.swift in Sources */,
+				EA2793C52CFC35920088733D /* Codable+Extensions.swift in Sources */,
 				EA2793A92CFC13850088733D /* LoginService.swift in Sources */,
 				EA27939B2CFBD6E70088733D /* LoginViewModel.swift in Sources */,
 				EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */,
@@ -538,6 +582,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.13;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -545,6 +597,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		EA2793B42CFC2E470088733D /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
