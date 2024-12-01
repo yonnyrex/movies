@@ -7,16 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA2793912CFBD6A90088733D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793902CFBD6A90088733D /* String+Extensions.swift */; };
+		EA2793942CFBD6BF0088733D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793922CFBD6BF0088733D /* CustomTextField.swift */; };
+		EA27939B2CFBD6E70088733D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793962CFBD6E70088733D /* LoginViewModel.swift */; };
+		EA27939C2CFBD6E70088733D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793982CFBD6E70088733D /* LoginView.swift */; };
+		EA27939E2CFBD7700088733D /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27939D2CFBD7700088733D /* LoginConstants.swift */; };
+		EA2793A02CFBD8430088733D /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27939F2CFBD8430088733D /* LoginError.swift */; };
+		EA2793A52CFBDA280088733D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793A42CFBDA280088733D /* NetworkService.swift */; };
+		EA2793A72CFBDA7B0088733D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793A62CFBDA7B0088733D /* ServiceError.swift */; };
+		EA2793A92CFC13850088733D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793A82CFC13850088733D /* LoginService.swift */; };
+		EA2793AC2CFC13C50088733D /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793AB2CFC13C50088733D /* LoginResult.swift */; };
+		EA2793AF2CFC19340088733D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EA2793AE2CFC19340088733D /* Moya */; };
+		EA2793B22CFC2B6B0088733D /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793B12CFC2B6B0088733D /* MoviesView.swift */; };
 		EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA666C32CFBC67D005DACE2 /* moviesApp.swift */; };
-		EAA666C62CFBC67D005DACE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA666C52CFBC67D005DACE2 /* ContentView.swift */; };
 		EAA666C82CFBC67F005DACE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666C72CFBC67F005DACE2 /* Assets.xcassets */; };
 		EAA666CB2CFBC67F005DACE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666CA2CFBC67F005DACE2 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA2793902CFBD6A90088733D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		EA2793922CFBD6BF0088733D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EA2793962CFBD6E70088733D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EA2793982CFBD6E70088733D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EA27939D2CFBD7700088733D /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		EA27939F2CFBD8430088733D /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		EA2793A42CFBDA280088733D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EA2793A62CFBDA7B0088733D /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		EA2793A82CFC13850088733D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		EA2793AB2CFC13C50088733D /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		EA2793B12CFC2B6B0088733D /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		EAA666C02CFBC67D005DACE2 /* movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA666C32CFBC67D005DACE2 /* moviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesApp.swift; sourceTree = "<group>"; };
-		EAA666C52CFBC67D005DACE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAA666C72CFBC67F005DACE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAA666CA2CFBC67F005DACE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,17 +47,102 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2793AF2CFC19340088733D /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA2793932CFBD6BF0088733D /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793922CFBD6BF0088733D /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		EA2793952CFBD6E70088733D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA27939D2CFBD7700088733D /* LoginConstants.swift */,
+				EA27939F2CFBD8430088733D /* LoginError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA2793972CFBD6E70088733D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793962CFBD6E70088733D /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA2793992CFBD6E70088733D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793982CFBD6E70088733D /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA27939A2CFBD6E70088733D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793952CFBD6E70088733D /* Models */,
+				EA2793972CFBD6E70088733D /* ViewModels */,
+				EA2793992CFBD6E70088733D /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EA2793A22CFBDA0B0088733D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793A62CFBDA7B0088733D /* ServiceError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA2793A32CFBDA110088733D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793AA2CFC13B90088733D /* Models */,
+				EA2793A82CFC13850088733D /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA2793AA2CFC13B90088733D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793AB2CFC13C50088733D /* LoginResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA2793AD2CFC19340088733D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA2793B02CFC2B4F0088733D /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				EA2793B12CFC2B6B0088733D /* MoviesView.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
 		EAA666B72CFBC67D005DACE2 = {
 			isa = PBXGroup;
 			children = (
 				EAA666C22CFBC67D005DACE2 /* movies */,
 				EAA666C12CFBC67D005DACE2 /* Products */,
+				EA2793AD2CFC19340088733D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +162,6 @@
 				EAA666D12CFBC818005DACE2 /* Networking */,
 				EAA666D42CFBC933005DACE2 /* Resources */,
 				EAA666D32CFBC839005DACE2 /* Utilities */,
-				EAA666C52CFBC67D005DACE2 /* ContentView.swift */,
 				EAA666C32CFBC67D005DACE2 /* moviesApp.swift */,
 				EAA666C92CFBC67F005DACE2 /* Preview Content */,
 			);
@@ -74,6 +179,9 @@
 		EAA666D12CFBC818005DACE2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793A32CFBDA110088733D /* Services */,
+				EA2793A22CFBDA0B0088733D /* Models */,
+				EA2793A42CFBDA280088733D /* NetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -81,6 +189,8 @@
 		EAA666D22CFBC828005DACE2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793B02CFC2B4F0088733D /* Movies */,
+				EA27939A2CFBD6E70088733D /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -105,6 +215,7 @@
 		EAA666D62CFBCA10005DACE2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793932CFBD6BF0088733D /* TextFields */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -112,6 +223,7 @@
 		EAA666D72CFBCA19005DACE2 /* Extensions  */ = {
 			isa = PBXGroup;
 			children = (
+				EA2793902CFBD6A90088733D /* String+Extensions.swift */,
 			);
 			path = "Extensions ";
 			sourceTree = "<group>";
@@ -139,6 +251,9 @@
 			dependencies = (
 			);
 			name = movies;
+			packageProductDependencies = (
+				EA2793AE2CFC19340088733D /* Moya */,
+			);
 			productName = movies;
 			productReference = EAA666C02CFBC67D005DACE2 /* movies.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +282,9 @@
 				Base,
 			);
 			mainGroup = EAA666B72CFBC67D005DACE2;
+			packageReferences = (
+				EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = EAA666C12CFBC67D005DACE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,8 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA666C62CFBC67D005DACE2 /* ContentView.swift in Sources */,
+				EA2793AC2CFC13C50088733D /* LoginResult.swift in Sources */,
+				EA2793B22CFC2B6B0088733D /* MoviesView.swift in Sources */,
+				EA2793A72CFBDA7B0088733D /* ServiceError.swift in Sources */,
+				EA27939C2CFBD6E70088733D /* LoginView.swift in Sources */,
+				EA2793942CFBD6BF0088733D /* CustomTextField.swift in Sources */,
+				EA2793912CFBD6A90088733D /* String+Extensions.swift in Sources */,
+				EA2793A52CFBDA280088733D /* NetworkService.swift in Sources */,
+				EA2793A92CFC13850088733D /* LoginService.swift in Sources */,
+				EA27939B2CFBD6E70088733D /* LoginViewModel.swift in Sources */,
 				EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */,
+				EA2793A02CFBD8430088733D /* LoginError.swift in Sources */,
+				EA27939E2CFBD7700088733D /* LoginConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +528,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA2793AE2CFC19340088733D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EAA666B82CFBC67D005DACE2 /* Project object */;
 }
