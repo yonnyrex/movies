@@ -44,3 +44,61 @@ struct Movie: Codable {
     }
     
 }
+
+extension MovieResponse {
+    
+    static func getStubMovie() -> Movie {
+        Movie(
+            id: 1,
+            posterPath: "/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+            title: "Moana 2",
+            voteAverage: 7.0,
+            releaseDate: "2024-11-27",
+            overview: "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced."
+        )
+    }
+    
+    static func getStubMovies() -> MovieResponse {
+        MovieResponse(
+            results: [
+                Movie(
+                    id: 1,
+                    posterPath: "/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+                    title: "Moana 2",
+                    voteAverage: 7.0,
+                    releaseDate: "2024-11-27",
+                    overview: "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced."
+                ),
+                Movie(
+                    id: 2,
+                    posterPath: "/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+                    title: "Moana 1",
+                    voteAverage: 7.0,
+                    releaseDate: "2024-11-27",
+                    overview: "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced."
+                )
+            ],
+            page: 1,
+            totalPages: 2
+        )
+    }
+    
+    static func getStubMoviesByName(name: String) -> MovieResponse {
+        MovieResponse(
+            results: [
+                Movie(
+                    id: 1,
+                    posterPath: "/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+                    title: "Moana 2",
+                    voteAverage: 7.0,
+                    releaseDate: "2024-11-27",
+                    overview: "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced."
+                )
+            ],
+            page: 1,
+            totalPages: 2
+        )
+    }
+    
+}
+
