@@ -12,7 +12,8 @@ final class UnauthenticatedCoordinator: NavigationCoordinatable {
     
     // MARK: - NavigationStack
     let stack = NavigationStack(initial: \UnauthenticatedCoordinator.start, false)
-    
+    let userDefaultsService = UserDefaultsService()
+
     // MARK: - Root Definition
     @Root var start = makeStart
     
@@ -22,7 +23,11 @@ final class UnauthenticatedCoordinator: NavigationCoordinatable {
     // MARK: - Public Methods
     @ViewBuilder
     func makeStart() -> some View {
-        LoginView()
+        if let isLogin = userDefaultsService.retrieve(for: .isLogin) as? Bool, isLogin {
+            authenticatedCoordinator().view()
+        } else {
+            LoginView()
+        }
     }
     
     func authenticatedCoordinator() -> NavigationViewCoordinator<AuthenticatedCoordinator> {
