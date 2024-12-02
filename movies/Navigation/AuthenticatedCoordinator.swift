@@ -16,10 +16,18 @@ final class AuthenticatedCoordinator: NavigationCoordinatable {
     // MARK: - Root Definition
     @Root var start = makeStart
     
+    // MARK: - Routes
+    @Route(.push) var movieDetail = makeMovieDetail
+    
     // MARK: - Public Methods
     @ViewBuilder
     func makeStart() -> some View {
         MoviesView()
+    }
+    
+    @ViewBuilder
+    func makeMovieDetail(movieID: String) -> some View {
+        MovieDetailView(viewModel: MovieDetailViewModel(movieID: movieID))
     }
     
 }

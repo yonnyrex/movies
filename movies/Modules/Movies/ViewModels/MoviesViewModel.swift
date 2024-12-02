@@ -97,4 +97,9 @@ class MoviesViewModel: ObservableObject {
         }
     }
     
+    func goToMovieDetail(movieID: String) {
+        self.router?.route(to: \.movieDetail, movieID)
+        //self.router?.route(to: \.movieDetail, movieID)
+    }
+    
 }

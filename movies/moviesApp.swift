@@ -14,11 +14,7 @@ struct moviesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if let isLogin = userDefaultsService.retrieve(for: .isLogin) as? Bool, isLogin {
-                return AuthenticatedCoordinator().view()
-            } else {
-                return UnauthenticatedCoordinator().view()
-            }
+            return UnauthenticatedCoordinator().view()
         }
     }
     

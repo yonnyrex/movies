@@ -51,6 +51,9 @@ struct MoviesView: View {
             LazyVGrid(columns: viewModel.columns, spacing: 20) {
                 ForEach(viewModel.filteredMovies, id: \.id) { movie in
                     MovieCell(movie: movie)
+                        .onTapGesture {
+                            viewModel.goToMovieDetail(movieID: "\(movie.id)")
+                        }
                         .onAppear {
                             viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
                         }
