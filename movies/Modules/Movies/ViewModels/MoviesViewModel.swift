@@ -41,7 +41,7 @@ class MoviesViewModel: ObservableObject {
         self.moviesService = moviesService
         self.userDefaults = userDefaults
         setupBindings()
-        fetchMovies()
+        //fetchMovies()
     }
     
     // MARK: - Methods
@@ -77,9 +77,9 @@ class MoviesViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.movies.append(contentsOf: response.results)
-                self.totalPages = response.totalPages
-                self.currentPage += 1
+                movies.append(contentsOf: response.results)
+                totalPages = response.totalPages
+                currentPage += 1
             }
             .store(in: &cancellables)
     }
@@ -99,7 +99,6 @@ class MoviesViewModel: ObservableObject {
     
     func goToMovieDetail(movieID: String) {
         self.router?.route(to: \.movieDetail, movieID)
-        //self.router?.route(to: \.movieDetail, movieID)
     }
     
 }

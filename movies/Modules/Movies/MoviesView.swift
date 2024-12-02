@@ -24,6 +24,9 @@ struct MoviesView: View {
         .alert(isPresented: $viewModel.displayError) {
             Alert(title: Text("Error"), message: Text(viewModel.error?.localizedDescription ?? "Error desconocido"), dismissButton: .default(Text("OK")))
         }
+        .onAppear {
+            viewModel.fetchMovies()
+        }
     }
     
     var searchTextField: some View {
