@@ -16,9 +16,7 @@
 		EA2793A72CFBDA7B0088733D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793A62CFBDA7B0088733D /* ServiceError.swift */; };
 		EA2793A92CFC13850088733D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793A82CFC13850088733D /* LoginService.swift */; };
 		EA2793AC2CFC13C50088733D /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793AB2CFC13C50088733D /* LoginResult.swift */; };
-		EA2793AF2CFC19340088733D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EA2793AE2CFC19340088733D /* Moya */; };
 		EA2793B22CFC2B6B0088733D /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793B12CFC2B6B0088733D /* MoviesView.swift */; };
-		EA2793B52CFC2E470088733D /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = EA2793B42CFC2E470088733D /* Stinsen */; };
 		EA2793B92CFC2FE60088733D /* UnauthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793B82CFC2FE60088733D /* UnauthenticatedCoordinator.swift */; };
 		EA2793BB2CFC30540088733D /* AuthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793BA2CFC30540088733D /* AuthenticatedCoordinator.swift */; };
 		EA2793BD2CFC315D0088733D /* Stinsen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2793BC2CFC315D0088733D /* Stinsen+Extensions.swift */; };
@@ -39,6 +37,13 @@
 		EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA666C32CFBC67D005DACE2 /* moviesApp.swift */; };
 		EAA666C82CFBC67F005DACE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666C72CFBC67F005DACE2 /* Assets.xcassets */; };
 		EAA666CB2CFBC67F005DACE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA666CA2CFBC67F005DACE2 /* Preview Assets.xcassets */; };
+		EAE57C202DAF515600B975D0 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57C1F2DAF515400B975D0 /* NetworkMonitor.swift */; };
+		EAE57C232DAF532500B975D0 /* MovieDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAE57C212DAF532500B975D0 /* MovieDataModel.xcdatamodeld */; };
+		EAE57C252DAF541900B975D0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57C242DAF541800B975D0 /* CoreDataStack.swift */; };
+		EAE57C272DAF54EC00B975D0 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57C262DAF54EA00B975D0 /* MovieEntity.swift */; };
+		EAE57C292DAF560C00B975D0 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = EAE57C282DAF560C00B975D0 /* Stinsen */; };
+		EAE57C2B2DAF561F00B975D0 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EAE57C2A2DAF561F00B975D0 /* Moya */; };
+		EAE57C2D2DAF574800B975D0 /* MovieLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57C2C2DAF574700B975D0 /* MovieLocalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		EAA666C32CFBC67D005DACE2 /* moviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesApp.swift; sourceTree = "<group>"; };
 		EAA666C72CFBC67F005DACE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAA666CA2CFBC67F005DACE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EAE57C1F2DAF515400B975D0 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		EAE57C222DAF532500B975D0 /* MovieDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieDataModel.xcdatamodel; sourceTree = "<group>"; };
+		EAE57C242DAF541800B975D0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EAE57C262DAF54EA00B975D0 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
+		EAE57C2C2DAF574700B975D0 /* MovieLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocalDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2793AF2CFC19340088733D /* Moya in Frameworks */,
-				EA2793B52CFC2E470088733D /* Stinsen in Frameworks */,
+				EAE57C2B2DAF561F00B975D0 /* Moya in Frameworks */,
+				EAE57C292DAF560C00B975D0 /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +206,8 @@
 		EA2793BE2CFC33F20088733D /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				EAE57C1D2DAF4FE300B975D0 /* CoreData */,
 				EA2793C32CFC34820088733D /* UserDefaults */,
-				EA2793C12CFC34590088733D /* UserDefaultsService.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -206,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2793BF2CFC33FB0088733D /* PersistenceService.swift */,
+				EA2793C12CFC34590088733D /* UserDefaultsService.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -353,6 +364,7 @@
 		EAA666D62CFBCA10005DACE2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAE57C1E2DAF513F00B975D0 /* Networking */,
 				EA2793932CFBD6BF0088733D /* TextFields */,
 			);
 			path = Components;
@@ -374,6 +386,25 @@
 				EA2793BA2CFC30540088733D /* AuthenticatedCoordinator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EAE57C1D2DAF4FE300B975D0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57C2C2DAF574700B975D0 /* MovieLocalDataSource.swift */,
+				EAE57C262DAF54EA00B975D0 /* MovieEntity.swift */,
+				EAE57C242DAF541800B975D0 /* CoreDataStack.swift */,
+				EAE57C212DAF532500B975D0 /* MovieDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EAE57C1E2DAF513F00B975D0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57C1F2DAF515400B975D0 /* NetworkMonitor.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,8 +442,8 @@
 			);
 			name = movies;
 			packageProductDependencies = (
-				EA2793AE2CFC19340088733D /* Moya */,
-				EA2793B42CFC2E470088733D /* Stinsen */,
+				EAE57C282DAF560C00B975D0 /* Stinsen */,
+				EAE57C2A2DAF561F00B975D0 /* Moya */,
 			);
 			productName = movies;
 			productReference = EAA666C02CFBC67D005DACE2 /* movies.app */;
@@ -447,8 +478,8 @@
 			);
 			mainGroup = EAA666B72CFBC67D005DACE2;
 			packageReferences = (
-				EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */,
-				EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */,
+				EAE57C152DAF46A000B975D0 /* XCRemoteSwiftPackageReference "stinsen" */,
+				EAE57C162DAF46BE00B975D0 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = EAA666C12CFBC67D005DACE2 /* Products */;
 			projectDirPath = "";
@@ -501,12 +532,15 @@
 				EA2793BD2CFC315D0088733D /* Stinsen+Extensions.swift in Sources */,
 				EA2793B92CFC2FE60088733D /* UnauthenticatedCoordinator.swift in Sources */,
 				EA2793A72CFBDA7B0088733D /* ServiceError.swift in Sources */,
+				EAE57C252DAF541900B975D0 /* CoreDataStack.swift in Sources */,
 				EA2793CE2CFCDC730088733D /* MoviesService.swift in Sources */,
 				EA2793BB2CFC30540088733D /* AuthenticatedCoordinator.swift in Sources */,
+				EAE57C202DAF515600B975D0 /* NetworkMonitor.swift in Sources */,
 				EA27939C2CFBD6E70088733D /* LoginView.swift in Sources */,
 				EA2793D82CFD37680088733D /* MovieDetailView.swift in Sources */,
 				EA2793942CFBD6BF0088733D /* CustomTextField.swift in Sources */,
 				EA2793C02CFC33FB0088733D /* PersistenceService.swift in Sources */,
+				EAE57C2D2DAF574800B975D0 /* MovieLocalDataSource.swift in Sources */,
 				EA2793C22CFC34590088733D /* UserDefaultsService.swift in Sources */,
 				EA2793A52CFBDA280088733D /* NetworkService.swift in Sources */,
 				EA2793D02CFCDC850088733D /* MoviesAPI.swift in Sources */,
@@ -515,10 +549,12 @@
 				EA2793D42CFCEB030088733D /* MovieCell.swift in Sources */,
 				EA2793C52CFC35920088733D /* Codable+Extensions.swift in Sources */,
 				EA2793A92CFC13850088733D /* LoginService.swift in Sources */,
+				EAE57C232DAF532500B975D0 /* MovieDataModel.xcdatamodeld in Sources */,
 				EA27939B2CFBD6E70088733D /* LoginViewModel.swift in Sources */,
 				EAA666C42CFBC67D005DACE2 /* moviesApp.swift in Sources */,
 				EA2793A02CFBD8430088733D /* LoginError.swift in Sources */,
 				EA27939E2CFBD7700088733D /* LoginConstants.swift in Sources */,
+				EAE57C272DAF54EC00B975D0 /* MovieEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,15 +815,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
-		EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */ = {
+		EAE57C152DAF46A000B975D0 /* XCRemoteSwiftPackageReference "stinsen" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rundfunk47/stinsen";
 			requirement = {
@@ -795,20 +823,41 @@
 				minimumVersion = 2.0.13;
 			};
 		};
+		EAE57C162DAF46BE00B975D0 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EA2793AE2CFC19340088733D /* Moya */ = {
+		EAE57C282DAF560C00B975D0 /* Stinsen */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EA2793A12CFBD9EE0088733D /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		EA2793B42CFC2E470088733D /* Stinsen */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EA2793B32CFC2E470088733D /* XCRemoteSwiftPackageReference "stinsen" */;
+			package = EAE57C152DAF46A000B975D0 /* XCRemoteSwiftPackageReference "stinsen" */;
 			productName = Stinsen;
 		};
+		EAE57C2A2DAF561F00B975D0 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE57C162DAF46BE00B975D0 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EAE57C212DAF532500B975D0 /* MovieDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EAE57C222DAF532500B975D0 /* MovieDataModel.xcdatamodel */,
+			);
+			currentVersion = EAE57C222DAF532500B975D0 /* MovieDataModel.xcdatamodel */;
+			path = MovieDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EAA666B82CFBC67D005DACE2 /* Project object */;
 }

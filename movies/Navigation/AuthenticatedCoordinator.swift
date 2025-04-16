@@ -26,8 +26,8 @@ final class AuthenticatedCoordinator: NavigationCoordinatable {
     }
     
     @ViewBuilder
-    func makeMovieDetail(movieID: String) -> some View {
-        MovieDetailView(viewModel: MovieDetailViewModel(movieID: movieID))
+    func makeMovieDetail(movie: Movie) -> some View {
+        MovieDetailView(viewModel: MovieDetailViewModel(movieData: movie))
     }
     
 }

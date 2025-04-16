@@ -23,17 +23,17 @@ class MovieDetailViewModel: ObservableObject {
     private var moviesService: MoviesServiceType
     private var cancellables: Set<AnyCancellable> = .init()
     private var userDefaults: PersistenceServiceType
-    private var movieID = ""
+    private var movieData: Movie?
     
     // MARK: - Initializer
     init(
         moviesService: MoviesServiceType = MoviesService(),
         userDefaults: PersistenceServiceType = UserDefaultsService(),
-        movieID: String
+        movieData: Movie?
     ) {
         self.moviesService = moviesService
         self.userDefaults = userDefaults
-        self.movieID = movieID
+        self.movieData = movieData
         setupBindings()
         loadMovie()
     }
@@ -50,8 +50,13 @@ class MovieDetailViewModel: ObservableObject {
     }
     
     func loadMovie() {
+        guard let movieID = movieData?.id, NetworkMonitor.shared.isConnected else {
+            self.movie = movieData
+            return
+        }
+        isLoading = true
         moviesService
-            .getMovieDetail(id: movieID)
+            .getMovieDetail(id: "\(movieID)")
             .receive(on: DispatchQueue.main)
             .sink { [weak self] result in
                 self?.isLoading = false

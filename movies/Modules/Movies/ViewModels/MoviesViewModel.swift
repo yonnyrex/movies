@@ -28,7 +28,8 @@ class MoviesViewModel: ObservableObject {
     private var currentPage = 1
     private var totalPages = 1
     private var isDelaying = false
-    
+    private let localDataSource = MovieLocalDataSource()
+
     // MARK: - Constants
     let itemsPerPage = 20
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
@@ -41,7 +42,10 @@ class MoviesViewModel: ObservableObject {
         self.moviesService = moviesService
         self.userDefaults = userDefaults
         setupBindings()
-        //fetchMovies()
+        if !NetworkMonitor.shared.isConnected {
+            movies = localDataSource.fetchCachedMovies()
+            filteredMovies = movies
+        }
     }
     
     // MARK: - Methods
@@ -64,28 +68,35 @@ class MoviesViewModel: ObservableObject {
     
     func fetchMovies() {
         guard currentPage <= totalPages else { return }
-        moviesService
-            .getMovies(page: currentPage)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] result in
-                self?.isLoading = false
-                switch result {
-                case .failure(let error):
-                    self?.error = .error(message: error.message)
-                case .finished:
-                    return
+        if NetworkMonitor.shared.isConnected {
+            moviesService
+                .getMovies(page: currentPage)
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] result in
+                    self?.isLoading = false
+                    switch result {
+                    case .failure(let error):
+                        self?.error = .error(message: error.message)
+                    case .finished:
+                        return
+                    }
+                } receiveValue: { [weak self] response in
+                    guard let self = self else { return }
+                    movies.append(contentsOf: response.results)
+                    localDataSource.saveMovies(response.results) // ✅ guardar
+                    totalPages = response.totalPages
+                    currentPage += 1
                 }
-            } receiveValue: { [weak self] response in
-                guard let self = self else { return }
-                movies.append(contentsOf: response.results)
-                totalPages = response.totalPages
-                currentPage += 1
-            }
-            .store(in: &cancellables)
+                .store(in: &cancellables)
+        } else {
+            movies = localDataSource.fetchCachedMovies()
+            filteredMovies = movies
+            isLoading = false
+        }
     }
     
     func loadMoreMoviesIfNeeded(currentItem: Movie?) {
-        guard let currentItem = currentItem else { return }
+        guard let currentItem = currentItem, NetworkMonitor.shared.isConnected else { return }
         let thresholdIndex = movies.index(movies.endIndex, offsetBy: -5)
         if let currentIndex = movies.firstIndex(where: { $0.id == currentItem.id }),
            currentIndex >= thresholdIndex,
@@ -97,8 +108,8 @@ class MoviesViewModel: ObservableObject {
         }
     }
     
-    func goToMovieDetail(movieID: String) {
-        self.router?.route(to: \.movieDetail, movieID)
+    func goToMovieDetail(movie: Movie) {
+        self.router?.route(to: \.movieDetail, movie)
     }
     
 }

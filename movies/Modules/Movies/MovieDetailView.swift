@@ -13,7 +13,7 @@ struct MovieDetailView: View {
     @ObservedObject private var viewModel: MovieDetailViewModel
 
     init(
-        viewModel: MovieDetailViewModel = MovieDetailViewModel(movieID: "")
+        viewModel: MovieDetailViewModel = MovieDetailViewModel(movieData: nil)
     ) {
         self.viewModel = viewModel
     }
@@ -45,18 +45,28 @@ struct MovieDetailView: View {
     }
     
     var photo: some View {
-        AsyncImage(url: viewModel.movie?.fullPosterURL) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 200)
-                .cornerRadius(8)
-        } placeholder: {
-            Rectangle()
-                .fill(Color.gray.opacity(0.3))
-                .frame(width: 120, height: 200)
-                .cornerRadius(8)
+        Group {
+            if let data = viewModel.movie?.imageData, let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                AsyncImage(url: viewModel.movie?.fullPosterURL) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    ZStack {
+                        Color.gray.opacity(0.3)
+                        ProgressView()
+                    }
+                }
+            }
         }
+        .frame(width: 150, height: 220)
+        .clipped()
+        .cornerRadius(12)
+        .shadow(radius: 5)
     }
     
     var poster: some View {

@@ -20,23 +20,28 @@ struct MovieCell: View {
     }
     
     var image: some View {
-        AsyncImage(url: movie.fullPosterURL) { image in
-            image
-                .resizable()
-                .scaledToFill()
-                .frame(width: 150, height: 220)
-                .clipped()
-                .cornerRadius(12)
-                .shadow(radius: 5)
-        } placeholder: {
-            ZStack {
-                Color.gray.opacity(0.3)
-                ProgressView()
+        Group {
+            if let data = movie.imageData, let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                AsyncImage(url: movie.fullPosterURL) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    ZStack {
+                        Color.gray.opacity(0.3)
+                        ProgressView()
+                    }
+                }
             }
-            .frame(width: 150, height: 220)
-            .cornerRadius(12)
-            .shadow(radius: 5)
         }
+        .frame(width: 150, height: 220)
+        .clipped()
+        .cornerRadius(12)
+        .shadow(radius: 5)
     }
     
     var title: some View {
