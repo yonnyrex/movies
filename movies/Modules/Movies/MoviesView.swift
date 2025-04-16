@@ -55,7 +55,7 @@ struct MoviesView: View {
                 ForEach(viewModel.filteredMovies, id: \.id) { movie in
                     MovieCell(movie: movie)
                         .onTapGesture {
-                            viewModel.goToMovieDetail(movieID: "\(movie.id)")
+                            viewModel.goToMovieDetail(movie: movie)
                         }
                         .onAppear {
                             viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
